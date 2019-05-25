@@ -20,6 +20,6 @@ module.exports = {
     "quotes": ["warn", "double"],
     "semi": ["warn", "always"],
     "no-unused-vars": ["warn"],
-    "no-console": "warn",
+    "no-console": ["error",{allow:["warn","error","log"]}]
   },
 };

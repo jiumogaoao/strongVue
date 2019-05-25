@@ -34,7 +34,7 @@ const sassLoader = {
 const jsLoader = {
   test: /\.js$/,
   exclude: /node_modules/,
-  use: ["babel-loader"]
+  use: ["babel-loader"],
 }
 
 const imgLoader = {
@@ -71,7 +71,7 @@ const eslintLoader = {
 
 exports.initLoader = function(env){
   const loaders = [];
-  if(env !== "dev"){
+  if(env !== "dev" && env !== "dummy"){
     cssLoader.use = [
       {
         loader:MiniCssExtractPlugin.loader,

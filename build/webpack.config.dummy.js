@@ -2,11 +2,10 @@ const webpackMerge = require("webpack-merge");
 const webpack = require("webpack");
 const { resolve } = require("./bundle")
 const webpackBaseFn = require("./webpack.config.base");
-const config = require('./config');
-let proxy = {};
-proxy[config.API] = {target: config.API};
-module.exports = function(env){
+const dummyList = require("../dummyList.js");
+module.exports =  async function(env){
   const baseConfig = webpackBaseFn(env)
+  await dummyList();
   return webpackMerge(baseConfig,{
     mode:"development",
     devServer:{
@@ -35,9 +34,6 @@ module.exports = function(env){
         children: false,
         hash:false,
       },
-     proxy: {
-      ...proxy
-    }
     },
     plugins:[
       //热更新

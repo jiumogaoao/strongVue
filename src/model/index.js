@@ -1,10 +1,7 @@
 import { testUrl } from "@shared/api";
+import {getFetch} from "../util/request.js";
 
-export const getFetchTest = async () => {
-  const res = await new Promise(res => {
-    setTimeout(() => {
-      res(testUrl);
-    },2000);
-  });
+export let getFetchTest = async () => {
+  const res = await getFetch(testUrl);
   return res;
 };

@@ -22,6 +22,11 @@ npm run build:report
 npm run serve
 ```
 
+5. 假数据环境
+...
+npm run dummy
+...
+
 ## 文件夹说明
 
 ```
@@ -40,6 +45,7 @@ npm run serve
 │      bundle.js
 │      externals.js
 │      loaders.js
+|      config.js(路径配置)
 │      webpack.config.base.js
 │      webpack.config.dev.js
 │      webpack.config.prod.js
@@ -86,12 +92,6 @@ npm run serve
 │          request.js
 │
 └─template                      —— 项目模板文件
-        config.js
         favicon.ico
         index.html
 ```
-
-## 文章地址
-[基于 Webpack4 + Vue 的多页应用解决方案（一）](https://www.jianshu.com/p/c52df2689d34)
-
-[基于 Webpack4 + Vue 的多页应用解决方案（二）](https://www.jianshu.com/p/0c888c895661)

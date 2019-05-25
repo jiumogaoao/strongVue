@@ -1,6 +1,6 @@
 import axios from "axios";
-
-axios.defaults.baseURL = window.env === "prod" ? window.prodBaseUrl : window.devBaseUrl;
+let config= require("../../build/config.js");
+axios.defaults.baseURL = config.API;
 axios.defaults.timeout = 120000;
 
 export const getFetch = async (url,params = {}) => {
@@ -28,4 +28,3 @@ export const postFetch = async (url,params = {}) => {
     };
   }
 };
-
