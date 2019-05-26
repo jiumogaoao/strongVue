@@ -27,6 +27,7 @@ module.exports = function(env,{ option }){
     devServer:{
       contentBase:resolve("dist"),
       host:"0.0.0.0",
+      port:"8888",
       useLocalIp: true,
       overlay:{
         errors:true,
