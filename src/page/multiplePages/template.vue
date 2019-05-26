@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>HOME</p>
+    <p>multiple pages</p>
   </div>
 </template>
 <script>
@@ -11,4 +11,3 @@ export default {
 <style lang="scss">
 @import "./style.scss"
 </style>
-

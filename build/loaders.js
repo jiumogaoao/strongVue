@@ -110,7 +110,8 @@ exports.initLoader = function(env){
     sassLoader,
     jsLoader,
     imgLoader,
-    fontLoader
+    fontLoader,
+    //exposeLoader
   );
 
   return loaders;

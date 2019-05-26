@@ -1,3 +1,4 @@
+console.log(process.env.OPTION)
 module.exports = {
   "env": {
     "browser": true,

@@ -1,4 +1,1 @@
-exports.externals = {
-  "vue": "Vue",
-  "axios": "axios"
-}
+exports.externals = {}

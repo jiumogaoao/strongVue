@@ -5,6 +5,7 @@
   "plugins": [
     [
       "transform-runtime",
+      "syntax-dynamic-import",
       {
         "polyfill": false,
         "regenerator": true

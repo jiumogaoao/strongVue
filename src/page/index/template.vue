@@ -1,35 +1,19 @@
 <template>
-  <section>
-    <p>{{greeting}}</p>
-    <Test/>
-    <div class="box">{{test}}</div>
-  </section>
+    <div>
+        <p>App</p>
+        <router-link to="/home">Home</router-link>
+        <router-link to="/login">Login</router-link>
+        <router-link to="/register">Register</router-link>
+        <router-view></router-view>
+    </div>
 </template>
+
 <script>
-import Test from "@component/test";
-import { getFetchTest } from "@model/index";
 export default {
-  components:{
-    Test,
-  },
-  created(){
-    this.getInitialFetch();
-  },
-  data(){
-    return{
-      greeting:"HELLO WORLD",
-      test:"Loading...",
-    };
-  },
-  methods:{
-    async getInitialFetch(){
-      const res = await getFetchTest();
-      this.test = res;
-    },
-  },
+  name: "app.vue",
 };
 </script>
-<style lang="scss">
-@import "./style.scss"
-</style>
 
+<style scoped>
+@import './style.scss'
+</style>
