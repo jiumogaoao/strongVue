@@ -7,7 +7,9 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPl
 const { resolve } = require("./bundle")
 const { externals } = require("./externals")
 const webpackBaseFn = require("./webpack.config.base");
-
+const config = require('./config');
+let proxy = {};
+proxy[config.API] = {target: config.API};
 module.exports = function(env,{ option }){
   const baseConfig = webpackBaseFn(env)
   const reportOn = option === "report"
@@ -48,6 +50,9 @@ module.exports = function(env,{ option }){
         children: false,
         hash:false,
       },
+     proxy: {
+      ...proxy
+    }
     },
     optimization:{
       splitChunks: {
@@ -86,6 +91,9 @@ module.exports = function(env,{ option }){
       children: false,
     },
     externals,
-    plugins
+    plugins,
+    performance:{
+      hints:false
+    }
   });
 }

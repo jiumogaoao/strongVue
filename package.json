@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env ENVIROMENT=dev webpack-dev-server",
-    "dummy": "cross-env ENVIROMENT=dummy webpack-dev-server",
+    "dummy" : "cross-env ENVIROMENT=dummy webpack-dev-server",
+    "preprod" : "cross-env ENVIROMENT=preprod webpack-dev-server",
     "build": "cross-env ENVIROMENT=prod webpack",
     "build:report": "cross-env OPTION=report npm run build",
     "serve": "http-server ./dist -o"
