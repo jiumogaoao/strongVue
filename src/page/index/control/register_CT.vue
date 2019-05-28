@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "register.vue",
+  name: "register_CT",
   data () {
     return {
       page: "Register Page!",

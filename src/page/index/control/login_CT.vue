@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "login.vue",
+  name: "login_CT",
   data () {
     return {
       page: "Login Page!",

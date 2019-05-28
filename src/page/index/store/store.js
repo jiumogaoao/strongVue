@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import user from "./user";
+import userST from "./user_ST";
 //let mutations = {};
 //Object.assign(mutations, user.mutations);
 Vue.use(Vuex);
@@ -9,6 +9,6 @@ export let store = new Vuex.Store({
     count: 0,
   },
   modules: {
-    user,
+    userST,
   },
 });

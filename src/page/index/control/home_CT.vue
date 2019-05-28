@@ -1,14 +1,14 @@
 <template>
     <div class="home">
         <div>{{page}}</div>
-        <vuextest :value="userName" :callback="callback"/>
+        <vuextestCP :value="userName" :callback="callback"/>
         <div>{{count}}</div>
     </div>
 </template>
 
 <script>
-import vuextest from "@component/vuextest/vuextest.vue";
-import {getFetch} from "@util/request.js";
+import vuextestCP from "@component/vuextest_CP/vuextest_CP.vue";
+import {getFetch} from "@util/request_UT.js";
 
 let getFetchTest = async () => {
   const res = await getFetch("/fxapi/services/system/ctmall/homepage@getAllCitys.japi");
@@ -17,9 +17,9 @@ let getFetchTest = async () => {
 };
 
 export default {
-  name: "home.vue",
+  name: "home_CT",
   components: {
-    "vuextest": vuextest,
+    "vuextestCP": vuextestCP,
   },
   data () {
     return {
@@ -29,7 +29,7 @@ export default {
   },
   mounted (){
     getFetchTest();
-    this.$store.dispatch("user/setUserName","jdjf");
+    this.$store.dispatch("userST/setUserName","jdjf");
   },
   methods:{
     callback(){
@@ -38,7 +38,7 @@ export default {
   },
   computed:{
     userName(){
-      return this.$store.state.user.userName;
+      return this.$store.state.userST.userName;
     },
   },
 };

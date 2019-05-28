@@ -8,12 +8,12 @@
 export default {
   data(){
     return{
-      name:"Test",
+      name:"vuextest_CP",
     };
   },
   props: ["value","callback"],
   mounted (){
-    this.$store.dispatch("user/setUserName","jdjf");
+    this.$store.dispatch("userST/setUserName","jdjf");
   },
   methods:{
     cl(){
@@ -23,7 +23,7 @@ export default {
   },
   computed:{
     userName(){
-      return this.$store.state.user.userName;
+      return this.$store.state.userST.userName;
     },
   },
 };
