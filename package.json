@@ -6,9 +6,13 @@
   "private": false,
   "scripts": {
     "dev": "cross-env ENVIROMENT=dev webpack-dev-server",
+    "devP1": "cross-env ENVIROMENT=dev webpack-dev-server --project projectOne",
     "dummy": "cross-env ENVIROMENT=dummy webpack-dev-server",
-    "preprod": "cross-env ENVIROMENT=preprod webpack --project projectOne && npm run serve",
-    "build": "cross-env ENVIROMENT=prod webpack --project projectOne",
+    "dummyP1": "cross-env ENVIROMENT=dummy webpack-dev-server --project projectOne",
+    "preprod": "cross-env ENVIROMENT=preprod webpack && npm run serve",
+    "preprodP1": "cross-env ENVIROMENT=preprod webpack --project projectOne && npm run serve",
+    "build": "cross-env ENVIROMENT=prod webpack",
+    "buildP1": "cross-env ENVIROMENT=prod webpack --project projectOne",
     "build:report": "cross-env OPTION=report npm run build",
     "serve": "http-server ./dist -o -c-1 --cors -P http://fx3t-ysqg.lhs11.com"
   },
