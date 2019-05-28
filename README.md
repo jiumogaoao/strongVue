@@ -1,18 +1,31 @@
 #安装
+
 下载安装nodejs 10
+```
 pull git
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install
+```
 #运行
+
 假数据环境（热更新 不生成文件）
+```
 npm run dummy
+```
 开发环境(热更新 不生成文件)
+```
 npm run dev
+```
 打包前检查（生成文件，不转换路径）
+```
 npm run preprod
+```
 打包（生成文件，转换路径）
+```
 npm run prod
+```
 #文件结构
+```
 |-strongVue //项目文件夹
  |-.git //git配置
  |-build //打包配置
@@ -37,3 +50,4 @@ npm run prod
  |-postcss.config.js //postcss配置
  |-README.md //说明文档
  |-webpack.config.js //webpack入口
+```
