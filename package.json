@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "cross-env ENVIROMENT=dev webpack-dev-server",
     "dummy" : "cross-env ENVIROMENT=dummy webpack-dev-server",
-    "preprod" : "cross-env ENVIROMENT=preprod webpack-dev-server",
+    "preprod" : "cross-env ENVIROMENT=preprod webpack && npm run serve",
     "build": "cross-env ENVIROMENT=prod webpack",
     "build:report": "cross-env OPTION=report npm run build",
-    "serve": "http-server ./dist -o"
+    "serve": "http-server ./dist -o -c-1 --cors -P http://fx3t-ysqg.lhs11.com"
   },
   "keywords": [],
   "author": "",
