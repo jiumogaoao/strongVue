@@ -12,9 +12,11 @@ const
   entry = {
     dummy:"./src/assets/dummy.js"
   },
-  output = {}
+  output = {},
   htmlPlugins = [];
 
+var argv = require('yargs').argv;
+const project = argv.project||"index"
 
 // Map alias
 function resolveAlias(){
@@ -26,8 +28,9 @@ function resolveAlias(){
 
 // Handle Entry and Output of Webpack
 function resolveEntryAndOutput(env){
-  entryFiles.forEach(dir => {
-    entry[dir] = resolve(`${entryDir}/${dir}`)
+  //console.log(entryDir)
+  //entryFiles.forEach(dir => {
+    entry[project] = resolve(`${entryDir}/${project}`)
     if(env === "dev" || env === "dummy"){
       output.filename = "js/[name].bundle.js";
     }else{
@@ -35,7 +38,7 @@ function resolveEntryAndOutput(env){
     }
     output.path = outputDir;
     output.publicPath = (env == "prod"?config.OSS:"");
-  })
+  //})
 }
 
 // Handle HTML Templates

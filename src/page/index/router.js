@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
-const Home = resolve => require(["./subpage/home.vue"], resolve);
-const Login = resolve => require(["./subpage/login.vue"], resolve);
-const Register = resolve => require(["./subpage/register.vue"], resolve);
+const Home = resolve => require(["./control/home.vue"], resolve);
+const Login = resolve => require(["./control/login.vue"], resolve);
+const Register = resolve => require(["./control/register.vue"], resolve);
 const routes = [
   { path: "", component: Home },
   { path: "/", component: Home },

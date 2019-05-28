@@ -1,7 +1,8 @@
 <template>
     <div class="home">
-        {{page}}
-        <vuextest/>
+        <div>{{page}}</div>
+        <vuextest :value="userName" :callback="callback"/>
+        <div>{{count}}</div>
     </div>
 </template>
 
@@ -23,11 +24,17 @@ export default {
   data () {
     return {
       page: "Home Page!",
+      count:0,
     };
   },
   mounted (){
     getFetchTest();
     this.$store.dispatch("user/setUserName","jdjf");
+  },
+  methods:{
+    callback(){
+      this.count++;
+    },
   },
   computed:{
     userName(){

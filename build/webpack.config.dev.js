@@ -5,7 +5,7 @@ const webpackBaseFn = require("./webpack.config.base");
 const config = require('./config');
 let proxy = {};
 proxy[config.API] = {target: config.API};
-module.exports = function(env){
+module.exports = function(env,opt){
   const baseConfig = webpackBaseFn(env)
   return webpackMerge(baseConfig,{
     mode:"development",

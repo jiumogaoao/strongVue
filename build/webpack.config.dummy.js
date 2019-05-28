@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const { resolve } = require("./bundle")
 const webpackBaseFn = require("./webpack.config.base");
 const dummyList = require("../dummyList.js");
-module.exports =  async function(env){
+module.exports =  async function(env,opt){
   const baseConfig = webpackBaseFn(env)
   await dummyList();
   return webpackMerge(baseConfig,{
