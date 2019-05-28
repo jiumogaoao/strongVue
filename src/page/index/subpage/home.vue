@@ -6,8 +6,15 @@
 </template>
 
 <script>
-import {getFetchTest} from "@model/index.js";
 import vuextest from "@component/vuextest/vuextest.vue";
+import {getFetch} from "@util/request.js";
+
+let getFetchTest = async () => {
+  const res = await getFetch("/fxapi/services/system/ctmall/homepage@getAllCitys.japi");
+  console.log(res);
+  return res;
+};
+
 export default {
   name: "home.vue",
   components: {
