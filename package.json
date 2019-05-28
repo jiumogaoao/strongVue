@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": false,
   "scripts": {
     "dev": "cross-env ENVIROMENT=dev webpack-dev-server",
     "dummy" : "cross-env ENVIROMENT=dummy webpack-dev-server",
