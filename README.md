@@ -35,7 +35,7 @@ npm run prod
   |-assets //共用静态文件（必须）
   |-component //控件（必须）
   |-dummy //假数据（必须）
-  |-page //页面（每个项目开一个文件夹）（必须）
+  |-subProject //页面（每个项目开一个文件夹）（必须）
    |-[projectName] //子项目（必须）
     |-control //control文件夹
      |-[controlName].vue //control文件
@@ -67,7 +67,7 @@ npm run prod
 ```
 ##创建子项目
 ```
-src/page/目录下创建子项目文件夹，
+src/subProject/目录下创建子项目文件夹，
 可从index文件夹复制或自行配置，
 ```
 ##创建命令
@@ -87,9 +87,9 @@ src/dummy/中添加mock data,
 ##创建数据模型
 ```
 按需求模块才分，
-src/page/[projectName]/store/中各模块添加一个js，
-并合并至src/page/[projectName]/store/store.js，
-可参考src/page/index/store/store.js和src/page/index/store/user_ST.js，
+src/subProject/[projectName]/store/中各模块添加一个js，
+并合并至src/subProject/[projectName]/store/store.js，
+可参考src/subProject/index/store/store.js和src/page/index/store/user_ST.js，
 ```
 ##创建UI模块
 ```
@@ -107,11 +107,11 @@ vue及scss参考src/component/vuextest_CP/\*.\*
 ```
 ##创建router及control（仅单页面，多页面应用每页为一个子项目）
 ```
-src/page/[projectName]/control/中，
+src/subProject/[projectName]/control/中，
 每一页添加一个control,
-可参考src/page/index/control/home_CT.vue，
-按需求在src/page/[projectName]/route.js中设置路由，
-可参考src/page/index/route.js
+可参考src/subProject/index/control/home_CT.vue，
+按需求在src/subProject/[projectName]/route.js中设置路由，
+可参考src/subProject/index/route.js
 ```
 ##页面组织
 ```
