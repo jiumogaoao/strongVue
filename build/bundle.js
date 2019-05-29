@@ -16,7 +16,15 @@ const
   htmlPlugins = [];
 
 var argv = require('yargs').argv;
-const project = argv.project||"index"
+console.log(argv)
+let projectList=[];
+Object.keys(argv).forEach(attr => {
+  if(attr.indexOf('project') != -1){
+    projectList.push(argv[attr])
+  }
+})
+if(!projectList.length){projectList.push('index')}
+//const project = argv.project||"index"
 
 // Map alias
 function resolveAlias(){
@@ -29,8 +37,8 @@ function resolveAlias(){
 // Handle Entry and Output of Webpack
 function resolveEntryAndOutput(env){
   //console.log(entryDir)
-  //entryFiles.forEach(dir => {
-    entry[project] = resolve(`${entryDir}/${project}`)
+  projectList.forEach(dir => {
+    entry[dir] = resolve(`${entryDir}/${dir}`)
     if(env === "dev" || env === "dummy"){
       output.filename = "js/[name].bundle.js";
     }else{
@@ -38,7 +46,7 @@ function resolveEntryAndOutput(env){
     }
     output.path = outputDir;
     output.publicPath = (env == "prod"?config.OSS:"");
-  //})
+  })
 }
 
 // Handle HTML Templates

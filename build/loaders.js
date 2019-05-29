@@ -39,13 +39,21 @@ const jsLoader = {
 
 const imgLoader = {
   test: /\.(png|svg|jpg|gif)$/,
-  use: {
-    loader: "file-loader",
-    options: {
-      name: "[name].[ext]",
-      outputPath:"img"
-    }
-  }
+  use: [
+    {
+      loader: "file-loader",
+      options: {
+        name: "[name].[ext]",
+        outputPath:"img"
+      }
+    },
+    {	//压缩图片要在file-loader之后使用
+	            	loader:'image-webpack-loader',
+                    options:{
+                        bypassOnDebug: true
+                    }
+	            }
+  ]
 }
 
 const fontLoader = {
