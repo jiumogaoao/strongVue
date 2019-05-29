@@ -43,6 +43,10 @@ npm run prod
  |-node_modules //nodejs库
  |-src //开发源文件（必须）
   |-assets //共用静态文件（必须）
+   |-icon //全局矢量图标
+   |-style//全局样式库
+   |-dummy.js//dummy入口
+   |-dummyList.js//dummy文件列表（自动生成）
   |-component //控件（必须）
   |-dummy //假数据（必须）
   |-subProject //页面（每个项目开一个文件夹）（必须）
@@ -198,4 +202,10 @@ control和component入口在vue文件内，
 ```
 必须与后端API返回格式相符，
 以API名命名
+```
+##icon
+```
+尽可能使用矢量图标，
+使用fontsize控制大小，
+color控制颜色
 ```
