@@ -1,6 +1,7 @@
 <template>
     <div class="register">
-        {{page}}
+        <div>{{page}}</div>
+        <span class="icon iconfont">&#xe65d;</span>
     </div>
 </template>
 
@@ -20,5 +21,9 @@ export default {
         color: red;
         font-size: 24px;
         background: deepskyblue;
+    }
+    .icon{
+      font-size: 300px;
+      line-height: 10px;
     }
 </style>

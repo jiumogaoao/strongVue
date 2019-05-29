@@ -1,6 +1,7 @@
 <template>
     <div class="login">
-        {{page}}
+        <div>{{page}}</div>
+        <img src="@assets/images/flow.png"/>
     </div>
 </template>
 
