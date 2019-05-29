@@ -51,7 +51,7 @@ function resolveEntryAndOutput(env){
 
 // Handle HTML Templates
 function combineHTMLWithTemplate(env){
-  entryFiles.forEach(dir => {
+  projectList.forEach(dir => {
     const htmlPlugin = new HTMLWebpackPlugin({
       filename:`${dir}.html`,
       template:templatePath,
