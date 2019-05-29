@@ -217,4 +217,5 @@ color控制颜色，
 可跨项目使用图片放于src/assets/images/，
 项目内部使用放于src/subProject/[projectName]/images/
 命名尽量易识别
+打包时会自动压缩图片
 ```
