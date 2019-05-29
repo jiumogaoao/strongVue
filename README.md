@@ -44,6 +44,7 @@ npm run prod
  |-src //开发源文件（必须）
   |-assets //共用静态文件（必须）
    |-icon //全局矢量图标
+   |-images //全局图片
    |-style//全局样式库
    |-dummy.js//dummy入口
    |-dummyList.js//dummy文件列表（自动生成）
@@ -56,6 +57,7 @@ npm run prod
     |-store //store文件夹
      |-store.js //store入口
      |-[storeName].js //store文件
+    |-images //项目图片
     |-index.js //子项目入口（必须）
     |-router.js //子项目路由
     |-style.scss //子项目全局scss
@@ -207,5 +209,12 @@ control和component入口在vue文件内，
 ```
 尽可能使用矢量图标，
 使用fontsize控制大小，
-color控制颜色
+color控制颜色，
+使用方法参考src/assets/icon/demo_index.html
+```
+##image
+```
+可跨项目使用图片放于src/assets/images/，
+项目内部使用放于src/subProject/[projectName]/images/
+命名尽量易识别
 ```
