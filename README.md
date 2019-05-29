@@ -29,6 +29,16 @@ npm run prod
 |-strongVue //项目文件夹
  |-.git //git配置
  |-build //打包配置（必须）
+  |-alias.js//路径缩写
+  |-bundle.js//依赖生成规则
+  |-config.js//全局常量配置
+  |-external.js//外部文件声明
+  |-loader.js//文件加工规则
+  |-webpack.config.base.js//全局打包配置
+  |-webpack.config.dev.js//dev打包配置
+  |-webpack.config.dummy.js//dummy打包配置
+  |-webpack.config.preprod.js//preprod打包配置
+  |-webpack.config.prod.js//prod打包配置
  |-dist //打包生成文件
  |-node_modules //nodejs库
  |-src //开发源文件（必须）
@@ -119,4 +129,73 @@ src/subProject/[projectName]/control/中，
 按业务需求调用API,
 并将数据存放于Store,
 从Store将数据分发至各component
+```
+
+#开发规范
+
+```
+##html
+```
+统一使用VUE,
+引用统一使用双对路径（webpack会根据环境自动转换绝对路经）,
+注释尽可能齐全（打生产包时会自动去掉）
+可以通过eslint自动检查
+```
+##js
+```
+尽量使用ES6+，
+control和component入口在vue文件内，
+使用require或import引入依赖，
+统一使用双对路径，
+注意模块拆分封装，
+注释尽可能齐全，
+可以通过eslint自动检查,
+```
+##css
+```
+统一使用scss,
+引用统一使用双对路径
+control和component入口在vue文件内，
+使用@import引入依赖，
+一般无需处理兼容性（posscss会自动处理），
+无需处理自适应（参考src/subProject/index/template自动处理自适应），
+长度单位一般用px,
+注意模块拆分封装，
+注释尽可能齐全，
+可以通过eslint自动检查,
+```
+##control
+```
+命名末尾统一‘_CT’，
+按设计需求组织component，
+按业务需求组织API及页面逻辑，
+组织store缓存并分发，
+注意拆分component，
+```
+##component
+```
+命名末尾统一‘_CP’，
+按设计需求提取共性，
+明确出入口数据需求，
+内部自闭，
+禁止使用vueX,
+保持代码洁净，可重用可迁移
+```
+##store
+```
+命名末尾统一‘_ST’，
+按业务需求组织前端数据模型,
+注意模块拆分，
+```
+##util
+```
+命名末尾统一‘_UT’，
+注意归纳逻辑共性，
+纯函数，禁止操作UI,
+可重用可迁移
+```
+##dummy
+```
+必须与后端API返回格式相符，
+以API名命名
 ```
