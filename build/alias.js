@@ -3,7 +3,7 @@ const alias = {
   "@util":"src/util",
   "@shared":"src/shared",
   "@assets":"src/assets",
-  "@page":"src/page",
+  "@subProject":"src/subProject",
 }
 
 module.exports = alias;
