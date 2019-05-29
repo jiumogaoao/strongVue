@@ -96,7 +96,7 @@ src/page/[projectName]/store/中各模块添加一个js，
 按设计需求，
 抽取重用率高的视觉交互元素，
 src/component/中每模块创建一个文件夹，
-vue及scss参考src/component/vuextest_CP/*.*
+vue及scss参考src/component/vuextest_CP/\*.\*
 ```
 ##创建工具库
 ```
